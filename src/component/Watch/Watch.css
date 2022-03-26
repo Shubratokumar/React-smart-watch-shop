@@ -3,6 +3,7 @@
     border-radius: 25px;
     position: relative;
     height: 550px;
+    box-shadow: 5px 10px 5px #3144f181;
 }
 .image-container{
     width: 300px;

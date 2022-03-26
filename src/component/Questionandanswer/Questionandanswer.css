@@ -1,0 +1,24 @@
+.q-and-a-container{
+    background-color: #9254C8;
+    margin: 20px 10px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+.description-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.answer{
+    font-size: 18px;
+    color: rgb(10, 132, 173);
+}
+.question-1,.question-2,.question-3 p{
+    text-align: justify;
+}
+.question-1,.question-2,.question-3{
+    padding: 15px;
+    background-color: rgb(252, 172, 67);
+    border-radius: 20px;
+}
