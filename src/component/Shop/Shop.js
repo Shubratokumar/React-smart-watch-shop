@@ -8,6 +8,7 @@ import {MdRemoveShoppingCart} from 'react-icons/md';
 const Shop = () => {
     const [watches, setWatches] = useState([]);
     const [item, setItem] = useState([]);
+    const [random, setRandom] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -33,9 +34,13 @@ const Shop = () => {
         }   
     }
 
-    const chooseOne = (id) => {
-        console.log (id);
+    const chooseOne = (items) => {
+        const random = Math.floor(Math.random() * items.length)
+        const randomItem = items[random];
+        // console.log(randomItem);
+        setRandom(randomItem)        
     }
+
     const chooseAgain = () =>{
         setItem([])
     }
@@ -50,11 +55,12 @@ const Shop = () => {
             </div>
             <div className='choose-container'>
                 <h2>Choose Smart watch :{item.length}</h2>
-                {
-                    item.map(product => <Cart product = {product} key ={product.id}></Cart>)
-                }
+                    {
+                        item.map(product => <Cart product = {product} key ={product.id}></Cart>)
+                    }
+                    
                 <div className='btn'>
-                    <button onClick={() => chooseAgain(item.id)} className='btn-choose'>
+                    <button onClick={() => chooseOne(item)} className='btn-choose'>
                         <p>Choose one </p>
                         <BsShuffle className='icon'></BsShuffle>
                     </button> <br />
