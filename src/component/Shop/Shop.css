@@ -9,6 +9,30 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+.choose-container{
+    background-color: coral;
+    color: azure;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-choose,.btn-remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: cyan;
+    border: none;
+    border-radius: 25px;
+}
+.btn-choose,.btn-remove p{
+    font-size: 17px;
+    margin-right: 7px;
+}
+.icon{
+    font-size: 1.5rem;
+}
 
 /* mobile screen responsiveness */
 /* @media screen and (min-width : 600px) {
