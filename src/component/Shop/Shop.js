@@ -4,6 +4,7 @@ import Watch from '../Watch/Watch';
 import './Shop.css';
 import {BsShuffle} from 'react-icons/bs';
 import {MdRemoveShoppingCart} from 'react-icons/md';
+import Randomitem from '../Randomitem/Randomitem';
 
 const Shop = () => {
     const [watches, setWatches] = useState([]);
@@ -31,18 +32,19 @@ const Shop = () => {
         }
         else{
             alert(`Opps!!! You selected same watch again.`)
-        }   
+        }  
     }
 
     const chooseOne = (items) => {
-        const random = Math.floor(Math.random() * items.length)
-        const randomItem = items[random];
-        // console.log(randomItem);
-        setRandom(randomItem)        
+        const randomNum = Math.floor(Math.random() * items.length)
+        const randomItem = items[randomNum];
+        setRandom([randomItem]);
+        setItem([]);       
     }
 
     const chooseAgain = () =>{
-        setItem([])
+        setItem([]);
+        setRandom([]);
     }
     
     return (
@@ -58,7 +60,9 @@ const Shop = () => {
                     {
                         item.map(product => <Cart product = {product} key ={product.id}></Cart>)
                     }
-                    
+                    {
+                        random.map(random => <Randomitem random = {random} key = {random.id}></Randomitem>)                        
+                    }
                 <div className='btn'>
                     <button onClick={() => chooseOne(item)} className='btn-choose'>
                         <p>Choose one </p>

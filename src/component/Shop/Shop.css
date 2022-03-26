@@ -27,7 +27,11 @@
     border: none;
     border-radius: 25px;
 }
-.btn-choose,.btn-remove p{
+.btn-remove p{
+    font-size: 17px;
+    margin-right: 7px;
+}
+.btn-choose p{
     font-size: 17px;
     margin-right: 7px;
 }
