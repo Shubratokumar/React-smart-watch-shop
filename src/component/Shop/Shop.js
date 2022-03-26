@@ -32,14 +32,20 @@ const Shop = () => {
         }
         else{
             alert(`Opps!!! You selected same watch again.`)
-        }  
+        }
+        setRandom([]);  
     }
 
     const chooseOne = (items) => {
-        const randomNum = Math.floor(Math.random() * items.length)
-        const randomItem = items[randomNum];
-        setRandom([randomItem]);
-        setItem([]);       
+        if(items){
+            const randomNum = Math.floor(Math.random() * items.length)
+            const randomItem = items[randomNum];
+            setRandom([randomItem]);
+            setItem([]);
+        }
+        else{
+            return;
+        }
     }
 
     const chooseAgain = () =>{
@@ -56,7 +62,7 @@ const Shop = () => {
 
             </div>
             <div className='choose-container'>
-                <h2>Choose Smart watch :{item.length}</h2>
+                <h2>Choose Smart watch </h2>
                     {
                         item.map(product => <Cart product = {product} key ={product.id}></Cart>)
                     }
@@ -65,11 +71,11 @@ const Shop = () => {
                     }
                 <div className='btn'>
                     <button onClick={() => chooseOne(item)} className='btn-choose'>
-                        <p>Choose one </p>
+                        <p>Choose One </p>
                         <BsShuffle className='icon'></BsShuffle>
                     </button> <br />
                     <button onClick = {chooseAgain} className='btn-remove'>
-                        <p>Choose again </p>
+                        <p>Choose Again </p>
                         <MdRemoveShoppingCart className='icon'></MdRemoveShoppingCart>
                     </button>
                 </div>

@@ -3,22 +3,38 @@
     margin: 20px 10px;
     text-align: center;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
+}
+.q-and-a-container h2{
+    font-size: 35px;
+    color: white;
 }
 .description-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 .answer{
     font-size: 18px;
-    color: rgb(10, 132, 173);
+    color: rgb(145, 0, 230);
 }
 .question-1,.question-2,.question-3 p{
     text-align: justify;
 }
 .question-1,.question-2,.question-3{
-    padding: 15px;
-    background-color: rgb(252, 172, 67);
+    padding: 25px;
+    background-color: rgb(245, 212, 170);
     border-radius: 20px;
+}
+/* mobile screen responsiveness */
+@media screen and (max-width : 600px){
+    .description-container{
+        grid-template-columns: 1fr;
+    }
+    .question-3{
+        order: 2;
+    }
+    .question-2{
+        order: 1;
+    }
 }

@@ -7,7 +7,7 @@ const Questionandanswer = () => {
             <h2>Question and Answer :</h2>
             <div className='description-container'>
                 <div className='question-1'>
-                    <h4>Q 01 : How does react work ?</h4>
+                    <h4>Q 01 : How does react works ?</h4>
                     <p><span className='answer'>Answer : </span>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. React is an  open-source, component-based front end library that is responsible only for UI design. It is maintained by the Developer team of Facebook. ReactJS uses a declarative paradigm that makes our application efficient and flexible. In general, React applications are made of multiple components and each responsible for rendering a small reusable piece of HTML. React implements a virtual DOM that is basically a DOM tree representation in JS. React elements are plain objects, unlike browser DOM elements, and are cheap to create. 
                     </p>                
                 </div>
